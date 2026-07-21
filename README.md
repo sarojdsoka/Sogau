@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="screenshot1.png" alt="Sogau Desktop" width="800"/>
-</p>
-
 <h1 align="center">Sogau Dotfiles</h1>
 
 <p align="center">
@@ -18,7 +14,18 @@
 ## Screenshots
 
 <p align="center">
-  <img src="screenshot2.png" alt="Desktop Overview" width="800"/>
+  <img src="screenshot1.png" alt="Clean Desktop" width="800"/>
+  <em>Clean Desktop</em>
+</p>
+
+<p align="center">
+  <img src="screenshot2.png" alt="Terminal with fastfetch" width="800"/>
+  <em>Terminal + Fastfetch</em>
+</p>
+
+<p align="center">
+  <img src="screenshot3.png" alt="Desktop Overview" width="800"/>
+  <em>Desktop Overview</em>
 </p>
 
 ## Included Configs
