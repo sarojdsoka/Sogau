@@ -1,0 +1,8 @@
+# Sensitive / machine-specific
+**/hypr/monitors.conf
+**/hypr/workspaces.conf
+**/hypr/hyprlock.conf
+**/hypr/hypridle.conf
+**/hypr/UserConfigs/LaptopDisplay.conf
+**/gtklock/config.ini
+*.bak

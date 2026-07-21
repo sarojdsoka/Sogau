@@ -1,0 +1,15 @@
+# Compact Sleek Mako Notifications
+
+anchor=top-right
+font=JetBrainsMono Nerd Font 10
+background-color=#010100
+text-color=#c7aaea
+border-color=#7aa2f7
+border-size=1
+border-radius=6
+margin=10
+padding=8
+width=280
+default-timeout=4000
+group-by=app-icon
+max-visible=5

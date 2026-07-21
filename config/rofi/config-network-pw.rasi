@@ -1,0 +1,36 @@
+* {
+    bg:    rgba(10,10,10,0.95);
+    fg:    #e8e8e8;
+    red:   rgba(211,47,47,0.45);
+    border: rgba(211,47,47,0.4);
+    input: rgba(20,20,20,0.8);
+}
+
+window {
+    border-radius: 16px;
+    background-color: transparent;
+    width: 380px;
+    location: center;
+}
+
+mainbox {
+    spacing: 0;
+    padding: 12px;
+    background-color: @bg;
+    border: 1px;
+    border-color: @border;
+    border-radius: 16px;
+    children: [ "inputbar" ];
+}
+
+inputbar {
+    padding: 12px;
+    background-color: @input;
+    border-radius: 10px;
+    children: [ "entry" ];
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+}

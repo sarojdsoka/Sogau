@@ -1,0 +1,75 @@
+* {
+    border: none;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8)
+}
+window {
+    background-image: url("current_wallpaper");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
+#clock-label {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 72.0px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#date-label {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 24.0px;
+    color: rgba(255,255,255,0.8);
+}
+
+#input-field {
+    border-radius: 12px;
+    background-color: rgba(0,0,0,0.4);
+    border: 1.5px solid rgba(255,255,255,0.3);
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 16px;
+    min-width: 250px;
+}
+
+#unlock-button {
+    background: none;
+    background-color: transparent;
+    color: transparent;
+    font-size: 0px;
+}
+
+#powerbar-box button {
+    background: none;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 12px;
+    padding: 10px 16px;
+    margin: 0 4px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#powerbar-box button:hover {
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 12px;
+}
+
+#input-label {
+    font-size: 0px;
+}
+
+#window-box infobar {
+    background-color: transparent;
+}
+
+#user-image {
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.4);
+}
+
+#user-name {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 20px;
+    color: rgba(255,255,255,0.9);
+    font-weight: bold;
+}

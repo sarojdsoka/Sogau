@@ -1,0 +1,170 @@
+/* ----------- 💫 Compact & Sleek Notifications 💫 -------- */
+
+@import '../../.config/waybar/wallust/colors-waybar.css';
+
+@define-color noti-border-color #7aa2f7;
+@define-color noti-bg rgba(17, 19, 27, 0.92);
+@define-color noti-bg-alt rgba(50, 55, 75, 0.8);
+@define-color noti-bg-hover rgba(122, 162, 247, 0.15);
+@define-color text-color @foreground;
+
+* {
+    font-family: "JetBrains Mono Nerd Font";
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.notification {
+    background: @noti-bg;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid @noti-border-color;
+    margin: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.notification-default-action,
+.notification-action {
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    background: transparent;
+    border: none;
+    color: @text-color;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+    background: @noti-bg-hover;
+}
+
+.close-button {
+    background: transparent;
+    color: #f7768e;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin: 0;
+    border: 1px solid transparent;
+}
+
+.close-button:hover {
+    background: rgba(247, 118, 142, 0.15);
+    border: 1px solid #f7768e;
+    color: #f7768e;
+}
+
+.summary {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: @text-color;
+}
+
+.body {
+    font-size: 0.8rem;
+    color: alpha(@text-color, 0.9);
+    margin-top: 2px;
+}
+
+.time {
+    font-size: 0.7rem;
+    color: alpha(@text-color, 0.6);
+}
+
+.floating-notifications {
+    background: transparent;
+}
+
+.widget-title {
+    color: @text-color;
+    background: @noti-bg-alt;
+    padding: 4px 8px;
+    margin: 4px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+}
+
+.widget-title>button {
+    font-size: 0.7rem;
+    color: @text-color;
+    border-radius: 4px;
+    background: rgba(122, 162, 247, 0.15);
+    border: none;
+}
+
+.widget-title>button:hover {
+    background: #7aa2f7;
+    color: #111725;
+}
+
+.widget-dnd {
+    background: @noti-bg-alt;
+    padding: 4px 8px;
+    margin: 4px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: alpha(@text-color, 0.8);
+}
+
+.widget-dnd>switch {
+    border-radius: 12px;
+    border: 1px solid #7aa2f7;
+    background: @noti-bg;
+}
+
+.widget-dnd>switch:checked {
+    background: #7aa2f7;
+}
+
+.widget-volume,
+.widget-backlight {
+    background: @noti-bg-alt;
+    padding: 6px 10px;
+    margin: 6px 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: @text-color;
+}
+
+.widget-volume>box>button,
+.widget-backlight>box>button {
+    background: rgba(122, 162, 247, 0.2);
+    border-radius: 6px;
+    padding: 4px 8px;
+    border: none;
+}
+
+.widget-buttons-grid {
+    padding: 4px;
+    margin: 4px;
+    border-radius: 8px;
+    background: @noti-bg-alt;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button {
+    margin: 2px;
+    background: @noti-bg;
+    border-radius: 6px;
+    color: @text-color;
+    padding: 6px;
+    font-size: 0.9rem;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:hover {
+    background: #7aa2f7;
+    color: #111725;
+}
+
+.control-center {
+    background: @noti-bg;
+    border: 1px solid @noti-border-color;
+    border-radius: 10px;
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+.blank-window {
+    background: alpha(black, 0.1);
+}

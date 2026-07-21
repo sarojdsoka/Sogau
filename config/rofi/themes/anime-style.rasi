@@ -1,0 +1,258 @@
+/* Anime Style Rofi Theme */
+/* Inspired by modern anime aesthetics */
+
+/*****----- Configuration -----*****/
+configuration {
+    modi:                       "drun,run,filebrowser";
+    show-icons:                 true;
+    display-drun:               "  apps";
+    display-run:                "  term";
+    display-filebrowser:        "  files";
+    display-window:             "  window";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+    hover-select:               true;
+    me-select-entry:            "MouseSecondary";
+    me-accept-entry:            "MousePrimary";
+}
+
+/* ---- Load wallust colors ---- */
+@import "~/.config/rofi/wallust/colors-rofi.rasi"
+
+/*****----- Global Properties -----*****/
+* {
+    bg:                         rgba(10,10,15,0.92);
+    bg-alt:                     rgba(20,20,30,0.95);
+    fg:                         #e0e0e0;
+    accent:                     #ff6b35;
+    accent2:                    #ff2d55;
+    selected-bg:                #ff6b35;
+    selected-fg:                #ffffff;
+    border-col:                 #ff6b35;
+    urgent-col:                 #ff2d55;
+}
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       38%;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      1px solid;
+    border-radius:               16px;
+    border-color:                @border-col;
+    background-color:            @bg;
+    cursor:                      "default";
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     8px;
+    margin:                      0px;
+    padding:                     16px;
+    border:                      0px solid;
+    border-radius:               0px;
+    background-color:            inherit;
+    children:                    [ "inputbar", "message", "custombox" ];
+}
+
+/*****----- A Custom Box -----*****/
+custombox {
+    spacing:                     0px;
+    background-color:            transparent;
+    text-color:                  @fg;
+    orientation:                 horizontal;
+    children:                    [ "mode-switcher", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     8px;
+    margin:                      0px;
+    padding:                     10px 14px;
+    border:                      0px solid;
+    border-radius:               10px;
+    border-color:                @border-col;
+    background-color:            @bg-alt;
+    text-color:                  @fg;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  @accent;
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    padding:                     4px 0px;
+    expand:                      false;
+    str:                         "⚡";
+    background-color:            inherit;
+    text-color:                  @accent;
+}
+
+entry {
+    enabled:                     true;
+    padding:                     4px 0px;
+    background-color:            transparent;
+    text-color:                  @fg;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           rgba(224,224,224,0.4);
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       6;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    spacing:                     4px;
+    margin:                      0px;
+    padding:                     8px;
+    border:                      0px solid;
+    border-radius:               0px;
+    background-color:            transparent;
+    text-color:                  @fg;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     8px 12px;
+    border:                      0px solid;
+    border-radius:               8px;
+    border-color:                @border-col;
+    background-color:            transparent;
+    text-color:                  @fg;
+    cursor:                      pointer;
+}
+
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+element normal.urgent {
+    background-color:            @urgent-col;
+    text-color:                  @selected-fg;
+}
+
+element normal.active {
+    background-color:            transparent;
+    text-color:                  @accent;
+}
+
+element selected.normal {
+    background-color:            @selected-bg;
+    text-color:                  @selected-fg;
+}
+
+element selected.urgent {
+    background-color:            @selected-bg;
+    text-color:                  @selected-fg;
+}
+
+element selected.active {
+    background-color:            @selected-bg;
+    text-color:                  @selected-fg;
+}
+
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    size:                        24px;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/*****----- Mode Switcher -----*****/
+mode-switcher{
+    enabled:                     true;
+    expand:                      false;
+    orientation:                 vertical;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               8px 0px 0px 8px;
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+button {
+    padding:                     8px 14px;
+    border:                      0px solid;
+    border-radius:               6px;
+    background-color:            transparent;
+    text-color:                  rgba(224,224,224,0.6);
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    cursor:                      pointer;
+}
+
+button selected {
+    background-color:            @selected-bg;
+    text-color:                  @selected-fg;
+}
+
+/*****----- Message -----*****/
+message {
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+textbox {
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               8px;
+    background-color:            @bg-alt;
+    text-color:                  @fg;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+error-message {
+    padding:                     10px;
+    border:                      1px solid;
+    border-radius:               8px;
+    border-color:                @accent2;
+    background-color:            @bg;
+    text-color:                  @fg;
+}

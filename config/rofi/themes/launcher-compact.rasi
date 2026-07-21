@@ -1,0 +1,174 @@
+/* Compact Launcher - Super+D */
+
+configuration {
+    font:                       "JetBrainsMono Nerd Font SemiBold 13";
+    modi:                       "drun,run";
+    show-icons:                 false;
+    display-drun:               "";
+    display-run:                "";
+    drun-display-format:        "{name}";
+    hover-select:               true;
+    me-select-entry:            "MouseSecondary";
+    me-accept-entry:            "MousePrimary";
+    matching:                   "fuzzy";
+}
+
+@import "~/.config/rofi/wallust/colors-rofi.rasi"
+
+* {
+    bg:                         rgba(10,10,15,0.92);
+    bg-alt:                     rgba(20,20,30,0.95);
+    fg:                         #e0e0e0;
+    accent:                     #ff6b35;
+    urgent-col:                 #ff2d55;
+    selected-bg:                #ff6b35;
+    selected-fg:                #ffffff;
+    border-col:                 #596695;
+}
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       28%;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      1px solid;
+    border-radius:               12px;
+    border-color:                @border-col;
+    background-color:            @bg;
+    cursor:                      "default";
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     4px;
+    margin:                      0px;
+    padding:                     8px;
+    border:                      0px solid;
+    border-radius:               0px;
+    background-color:            inherit;
+    children:                    [ "inputbar", "listview" ];
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     6px;
+    margin:                      0px;
+    padding:                     6px 10px;
+    border:                      0px solid;
+    border-radius:               8px;
+    border-color:                @border-col;
+    background-color:            @bg-alt;
+    text-color:                  @fg;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    padding:                     2px 0px;
+    expand:                      false;
+    str:                         ">>";
+    background-color:            inherit;
+    text-color:                  @accent;
+}
+
+entry {
+    enabled:                     true;
+    padding:                     2px 0px;
+    background-color:            transparent;
+    text-color:                  @fg;
+    cursor:                      text;
+    placeholder:                 "Type to search...";
+    placeholder-color:           rgba(224,224,224,0.3);
+}
+
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       10;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    spacing:                     2px;
+    margin:                      0px;
+    padding:                     4px;
+    border:                      0px solid;
+    border-radius:               0px;
+    background-color:            transparent;
+    text-color:                  @fg;
+    cursor:                      "default";
+}
+
+element {
+    enabled:                     true;
+    spacing:                     6px;
+    margin:                      0px;
+    padding:                     4px 8px;
+    border:                      0px solid;
+    border-radius:               6px;
+    border-color:                @border-col;
+    background-color:            transparent;
+    text-color:                  @fg;
+    cursor:                      pointer;
+}
+
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+element normal.urgent {
+    background-color:            @urgent-col;
+    text-color:                  @selected-fg;
+}
+
+element normal.active {
+    background-color:            transparent;
+    text-color:                  @accent;
+}
+
+element selected.normal {
+    background-color:            @selected-bg;
+    text-color:                  @selected-fg;
+}
+
+element selected.urgent {
+    background-color:            @selected-bg;
+    text-color:                  @selected-fg;
+}
+
+element selected.active {
+    background-color:            @selected-bg;
+    text-color:                  @selected-fg;
+}
+
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    size:                        0px;
+}
+
+element-text {
+    font:                        "JetBrainsMono Nerd Font SemiBold 11";
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
