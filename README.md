@@ -9,6 +9,10 @@
   <img src="https://img.shields.io/badge/WM-Hyprland-ff69b4?style=flat-square&logo=hyprland"/>
 </p>
 
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/10444803-edd9-4a4f-9766-60c1c0027f02" />
+
+
 ---
 
 ## Included Configs
